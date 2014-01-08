@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /
+
+# Remove access to system folder
+RewriteCond %{REQUEST_URI} ^core.*
+RewriteRule ^(.*)$ /index.php?uri=$1 [L]
+
+# Allow user to download valid files, otherwise send to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php?uri=$1 [L]
