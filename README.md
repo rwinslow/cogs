@@ -15,6 +15,7 @@ Cogs runs with the following flow:
 * Close database connection
 
 Cogs Controller Details:
+
 Cogs uses traversal of URI to determine which controller to call in order to generate pages. It begins at the end of the URI, looks at each part of the path until it gets to the root. Cogs uses the Camel_Case convention for all controller classes. When looking for a controller, it is case-insensitive based on the string in the URI.
 
 For example:
