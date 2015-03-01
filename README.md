@@ -1,18 +1,18 @@
 Cogs runs with the following flow:
-index.php
-Load configuration file cogs.config.php
-Toggle debug mode depending on value in config file
-Include core framework files and dependencies
-Create connection to database
-Include models from plugins
-Include all other main models that may depend on plugins
-Include controllers from plugins
-Include all other main controllers that may depend on plugins
-Include all other plugin files
-Define master template
-Traverse URI for correct controller to call
-Run controller if one is found
-Close database connection
+*index.php
+*Load configuration file cogs.config.php
+*Toggle debug mode depending on value in config file
+*Include core framework files and dependencies
+*Create connection to database
+*Include models from plugins
+*Include all other main models that may depend on plugins
+*Include controllers from plugins
+*Include all other main controllers that may depend on plugins
+*Include all other plugin files
+*Define master template
+*Traverse URI for correct controller to call
+*Run controller if one is found
+*Close database connection
 
 Cogs Controller Details:
 Cogs uses traversal of URI to determine which controller to call in order to generate pages. It begins at the end of the URI, looks at each part of the path until it gets to the root. Cogs uses the Camel_Case convention for all controller classes. When looking for a controller, it is case-insensitive based on the string in the URI.
